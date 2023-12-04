@@ -1,4 +1,4 @@
-package assignments;
+package assignment01;
 
 import org.openqa.selenium.chrome.*;
 
