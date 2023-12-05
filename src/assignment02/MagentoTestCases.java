@@ -16,7 +16,7 @@ public class MagentoTestCases extends Parameter {
 		driver.manage().window().maximize();
 	}
 
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1)
 	public void signUp() throws InterruptedException {
 		driver.get(SignupUrl);
 
@@ -41,30 +41,34 @@ public class MagentoTestCases extends Parameter {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2)
 	public void logout() throws InterruptedException {
 
 		driver.get(LogoutUrl);
-		Thread.sleep(7000);
+		Thread.sleep(10000);
 
 		softAssert.assertEquals(driver.getCurrentUrl(), MagentoUrl,"Validation of the website url after the logout process");
 		softAssert.assertAll();
 	}
 
 	@Test(priority = 3)
-	public void login() {
+	public void login() throws InterruptedException {
 
 		driver.get(LoginUrl);
 		WebElement loginEmailField = driver.findElement(By.id("email"));
 		WebElement loginPasswordField = driver.findElement(By.id("pass"));
 		WebElement loginBtn = driver.findElement(By.id("send2"));
 
-		loginEmailField.sendKeys("EmanAli721@gmail.com");
+		loginEmailField.sendKeys(Email);
 		loginPasswordField.sendKeys(Password);
 		loginBtn.click();
 		
-		softAssert.assertEquals(driver.getCurrentUrl(), LoggedUrl,"validation of the website url after the login process");
+		Thread.sleep(2000);
+		
+		softAssert.assertEquals(driver.getCurrentUrl(), MagentoUrl,"validation of the website url after the login process");
 		softAssert.assertAll();
+		
+
 	}
 
 	@AfterTest

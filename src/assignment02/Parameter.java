@@ -17,8 +17,7 @@ public class Parameter {
 	static String MagentoUrl = "https://magento.softwaretestingboard.com/";
 	static String SignupUrl = "https://magento.softwaretestingboard.com/customer/account/create/";
 	static String LogoutUrl = "https://magento.softwaretestingboard.com/customer/account/logoutSuccess/";
-	static String LoginUrl = "https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/";
-	static String LoggedUrl= "https://magento.softwaretestingboard.com/customer/account/";
+	static String LoginUrl = "https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS9jdXN0b21lci9hY2NvdW50L2NyZWF0ZS8%2C/";
 	
 	static String FirstNames[] = { "Khadijah", "Sabah", "Eman" };
 	static String LastNames[] = { "Ahmad", "Saleh", "Ali" };
